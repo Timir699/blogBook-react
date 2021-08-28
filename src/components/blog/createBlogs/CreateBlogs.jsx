@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Form from './form/Form'
 import AllBlogs from './allBlogs/AllBlogs'
 import { useHistory } from 'react-router-dom'
+import shortid from 'shortid'
 
 // getting data from localstorage
 
@@ -20,7 +21,8 @@ const CreateBlogs = (props) => {
     let { loggedInUser, setLoggedInUser } = props
     const [blogData, setBlogData] = useState({
         blogName: '',
-        blogDescription: ''
+        blogDescription: '',
+        id: shortid.generate()
     })
     const [allBlogs, setAllBlogs] = useState(getAllBlogs())
     const blogHandler = (e) => {
@@ -35,7 +37,8 @@ const CreateBlogs = (props) => {
 
         setBlogData({
             blogName: '',
-            blogDescription: ''
+            blogDescription: '',
+            id: shortid.generate()
         })
     }
     const history = useHistory()
@@ -57,6 +60,7 @@ const CreateBlogs = (props) => {
                 loggedInUser={loggedInUser} />
             <AllBlogs allBlogs={allBlogs}
                 loggedInUser={loggedInUser}
+                setAllBlogs={setAllBlogs}
             />
         </div>
     );
