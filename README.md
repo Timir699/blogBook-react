@@ -14,7 +14,7 @@ in this project I focused on functionality without any third-party support & des
 
 4)Used React-Router-Dom for Routing.
 
-5)Conditional Routing
+5)Conditional Render
 
 #Challenges i faced in this project:
 
