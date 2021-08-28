@@ -1,27 +1,41 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Form from './form/Form'
 import AllBlogs from './allBlogs/AllBlogs'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+
+// getting data from localstorage
+
+const getAllBlogs = () => {
+    let allBlogs = localStorage.getItem('allBlogs')
+    console.log(allBlogs);
+    if (allBlogs) {
+        return JSON.parse(localStorage.getItem('allBlogs'))
+    } else {
+        return []
+    }
+}
+
+
 const CreateBlogs = (props) => {
-    let {userInformation, loggedInUser, setLoggedInUser} = props
+    let { loggedInUser, setLoggedInUser } = props
     const [blogData, setBlogData] = useState({
-        blogName : '',
-        blogDescription : ''
+        blogName: '',
+        blogDescription: ''
     })
-    const [allBlogs, setAllBlogs] = useState([])
+    const [allBlogs, setAllBlogs] = useState(getAllBlogs())
     const blogHandler = (e) => {
         setBlogData({
             ...blogData,
-            [e.target.name] : e.target.value
+            [e.target.name]: e.target.value
         })
     }
     const blogFormHandler = (e) => {
         e.preventDefault()
-        setAllBlogs([...allBlogs, blogData ])
-       
+        setAllBlogs([...allBlogs, blogData])
+
         setBlogData({
-            blogName : '',
-            blogDescription : ''
+            blogName: '',
+            blogDescription: ''
         })
     }
     const history = useHistory()
@@ -29,23 +43,23 @@ const CreateBlogs = (props) => {
         console.log(loggedInUser);
         setLoggedInUser(null)
         history.push("/Login")
-        console.log('blogs',allBlogs); 
+        console.log('blogs', allBlogs);
         console.log(loggedInUser);
     }
-    
-    
-    return ( 
+
+
+    return (
         <div>
-            { loggedInUser ? <button onClick = { loggedOut }> Log Out </button> : '' }
-            <Form blogData = {blogData}
-                  blogFormHandler = {blogFormHandler}
-                  blogHandler = { blogHandler }
-                  loggedInUser = {loggedInUser} />
-            <AllBlogs allBlogs = {allBlogs}
-                      loggedInUser = {loggedInUser}
+            {loggedInUser ? <button onClick={loggedOut}> Log Out </button> : ''}
+            <Form blogData={blogData}
+                blogFormHandler={blogFormHandler}
+                blogHandler={blogHandler}
+                loggedInUser={loggedInUser} />
+            <AllBlogs allBlogs={allBlogs}
+                loggedInUser={loggedInUser}
             />
         </div>
-     );
+    );
 }
- 
+
 export default CreateBlogs;
