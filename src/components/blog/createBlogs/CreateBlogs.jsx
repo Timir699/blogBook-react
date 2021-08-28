@@ -16,7 +16,6 @@ const getAllBlogs = () => {
     }
 }
 
-
 const CreateBlogs = (props) => {
     let { loggedInUser, setLoggedInUser } = props
     const [blogData, setBlogData] = useState({
@@ -49,7 +48,6 @@ const CreateBlogs = (props) => {
         console.log('blogs', allBlogs);
         console.log(loggedInUser);
     }
-
 
     return (
         <div>
