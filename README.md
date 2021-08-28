@@ -1,3 +1,21 @@
+#Project_Details : 
+
+This is my first project in react Eco System. In this project i tried to make functionallity like Facebook.Authentication, Log in, log out Handling with useState hook. Then i tried to show a blog page where user can create his/her blog,then can publish. 
+
+in this project i focused on functionallity without any third party support & design was not my priority in this project that is why i did'nt use any css.
+
+Main focuses on:
+1) Component tree
+2)understand react state from core,how one way data flow works,how props works.
+3)react hooks (useState,useEffect)
+4)Used React-Router-Dom for Routing.
+
+Challenges i faced in this project:
+
+This is my first project with React so This project was full of challenge for me. first of all i faced difficulties with managing state, then i understand why redux or context api need. managing one way data flowing was first challenge. then i struggled with conditional routing. if user is log in, only then in blogpage i can create or delete data & at last i learned how local storage work in react app. i struggled with useEffect hooks.then learn how useEffect hooks work. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
