@@ -6,8 +6,11 @@ in this project i focused on functionallity without any third party support & de
 
 Main focuses on:
 1) Component tree
+
 2)understand react state from core,how one way data flow works,how props works.
+
 3)react hooks (useState,useEffect)
+
 4)Used React-Router-Dom for Routing.
 
 Challenges i faced in this project:
