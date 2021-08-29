@@ -4,7 +4,6 @@ import Signup from "./signup/Signup";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import { useState } from 'react'
 
-
 const getUserInformation = () => {
     let userInformation = localStorage.getItem('userInformation')
     console.log(userInformation);
@@ -14,7 +13,6 @@ const getUserInformation = () => {
         return []
     }
 }
-
 
 const Components = () => {
     const [loggedInUser, setLoggedInUser] = useState(null)
@@ -28,10 +26,7 @@ const Components = () => {
                 <Link to="/Blogs" ><button> Blogs </button></Link>
 
                 <Switch>
-                    <Route exact path="/" >
-
-                    </Route>
-                    <Route path="/Signup" >
+                    <Route exact path="/Signup" >
                         <Signup userInformation={userInformation}
                             setUserInformation={setUserInformation}
                         />
