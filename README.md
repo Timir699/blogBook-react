@@ -14,9 +14,13 @@ in this project I focused on functionality without any third-party support & des
 
 4)Used React-Router-Dom for Routing.
 
+5)Conditional Render
+
 #Challenges i faced in this project:
 
 This is my first project with React so This project was full of challenges for me. first of all, i faced difficulties with managing state, then I understand why redux or context API needs. managing one-way data flowing was the first challenge. then i struggled with conditional routing. if a user is log in, only then on the blog page I can create or delete data & at last, i learned how local storage works in react app. I struggled with useEffect hooks. then learn how useEffect hooks work.
+
+Live link : https://practical-snyder-2e0e48.netlify.app/
 
 
 # Getting Started with Create React App
