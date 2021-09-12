@@ -21,6 +21,7 @@ const Components = () => {
         <div>
             <h2> WelCome to Blogbook </h2>
             <Router>
+
                 <Link to="/Signup" ><button> Sign Up </button></Link>
                 <Link to="/Login" ><button> Log in </button></Link>
                 <Link to="/Blogs" ><button> Blogs </button></Link>
