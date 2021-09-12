@@ -27,12 +27,7 @@ const Components = () => {
                 <Link to="/Blogs" ><button> Blogs </button></Link>
 
                 <Switch>
-                    <Route exact path="/" >
-                        <Signup userInformation={userInformation}
-                            setUserInformation={setUserInformation}
-                        />
-                    </Route>
-                    <Route path="/Signup" >
+                    <Route exact path="/Signup" >
                         <Signup userInformation={userInformation}
                             setUserInformation={setUserInformation}
                         />
